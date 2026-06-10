@@ -3,80 +3,80 @@ const quizQuestions = [
     {
         question: "O que é sustentabilidade na agricultura?",
         options: [
-            "Usar apenas água salgada",
-            "Produzir alimentos sem prejudicar o meio ambiente para as futuras gerações",
-            "Não plantar nada durante o ano",
-            "Usar somente máquinas antigas"
+            "❌ Usar apenas água salgada",
+            "✅ Produzir alimentos sem prejudicar o meio ambiente para as futuras gerações",
+            "❌ Não plantar nada durante o ano",
+            "❌ Usar somente máquinas antigas"
         ],
         correct: 1
     },
     {
         question: "Qual é um exemplo de prática sustentável?",
         options: [
-            "Queimar todas as folhas após a colheita",
-            "Rotação de culturas para preservar o solo",
-            "Usar o máximo de água possível",
-            "Eliminar todas as plantas e insetos"
+            "❌ Queimar todas as folhas após a colheita",
+            "✅ Rotação de culturas para preservar o solo",
+            "❌ Usar o máximo de água possível",
+            "❌ Eliminar todas as plantas e insetos"
         ],
         correct: 1
     },
     {
         question: "Qual destes é um problema ambiental causado pelo uso excessivo de químicos?",
         options: [
-            "Chuva amarela",
-            "Contaminação do solo e da água",
-            "Aumento de neve",
-            "Redução de temperatura global"
+            "❌ Chuva amarela",
+            "✅ Contaminação do solo e da água",
+            "❌ Aumento de neve",
+            "❌ Redução de temperatura global"
         ],
         correct: 1
     },
     {
         question: "Como a biodiversidade ajuda a agricultura?",
         options: [
-            "Não ajuda de forma nenhuma",
-            "Polinizadores como abelhas ajudam na reprodução das plantas",
-            "Apenas deixa o campo colorido",
-            "Afasta todos os insetos"
+            "❌ Não ajuda de forma nenhuma",
+            "✅ Polinizadores como abelhas ajudam na reprodução das plantas",
+            "❌ Apenas deixa o campo colorido",
+            "❌ Afasta todos os insetos"
         ],
         correct: 1
     },
     {
         question: "Qual é um dos benefícios da conservação de água na agricultura?",
         options: [
-            "Aumenta o calor do solo",
-            "Reduz a quantidade de alimentos produzidos",
-            "Preserva um recurso natural importante para o futuro",
-            "Torna o trabalho mais pesado"
+            "❌ Aumenta o calor do solo",
+            "❌ Reduz a quantidade de alimentos produzidos",
+            "✅ Preserva um recurso natural importante para o futuro",
+            "❌ Torna o trabalho mais pesado"
         ],
         correct: 2
     },
     {
         question: "O que é agricultura familiar?",
         options: [
-            "Plantações gigantescas",
-            "Produção realizada por famílias em pequenas propriedades",
-            "Agricultura sem nenhuma tecnologia",
-            "Apenas culturas exóticas"
+            "❌ Plantações gigantescas",
+            "✅ Produção realizada por famílias em pequenas propriedades",
+            "❌ Agricultura sem nenhuma tecnologia",
+            "❌ Apenas culturas exóticas"
         ],
         correct: 1
     },
     {
         question: "Por que é importante preservar o solo?",
         options: [
-            "Para que o solo não desapareça",
-            "Porque o solo contém nutrientes essenciais para o crescimento das plantas",
-            "Porque torna a agricultura mais cara",
-            "Porque o solo é feito de ouro"
+            "❌ Para que o solo não desapareça",
+            "✅ Porque o solo contém nutrientes essenciais para o crescimento das plantas",
+            "❌ Porque torna a agricultura mais cara",
+            "❌ Porque o solo é feito de ouro"
         ],
         correct: 1
     },
     {
         question: "Qual prática NÃO é sustentável?",
         options: [
-            "Compostagem de resíduos",
-            "Irrigação eficiente",
-            "Uso descontrolado de agrotóxicos",
-            "Rotação de culturas"
+            "❌ Compostagem de resíduos",
+            "❌ Irrigação eficiente",
+            "✅ Uso descontrolado de agrotóxicos",
+            "❌ Rotação de culturas"
         ],
         correct: 2
     }
@@ -89,8 +89,10 @@ let userAnswers = [];
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     initializeTheme();
+    setupFontSizeToggle();
     loadQuiz();
     setupNavigation();
+    setupScrollToTop();
 });
 
 // Theme Toggle
@@ -149,9 +151,6 @@ function setupFontSizeToggle() {
     });
 }
 
-// Initialize Font Size Toggle
-setupFontSizeToggle();
-
 // Load Quiz
 function loadQuiz() {
     const quizContent = document.getElementById('quizContent');
@@ -195,7 +194,7 @@ function loadQuiz() {
     // Add submit button
     const submitBtn = document.createElement('button');
     submitBtn.className = 'quiz-button';
-    submitBtn.textContent = 'Enviar Quiz';
+    submitBtn.textContent = '✅ Enviar Quiz';
     submitBtn.onclick = submitQuiz;
     quizContent.appendChild(submitBtn);
 }
@@ -215,7 +214,7 @@ function submitQuiz() {
     });
     
     if (!allAnswered) {
-        alert('Por favor, responda todas as perguntas antes de enviar!');
+        alert('📋 Por favor, responda todas as perguntas antes de enviar!');
         return;
     }
     
@@ -248,7 +247,7 @@ function showQuizResult() {
     const percentage = (score / quizQuestions.length) * 100;
     
     if (percentage === 100) {
-        scoreMessage.textContent = '🌟 Parabéns! Você é um especialista em sustentabilidade!';
+        scoreMessage.textContent = '🌟 Parabéns! Você é um especialista em sustentabilidade! Conhecimentos incríveis!';
     } else if (percentage >= 80) {
         scoreMessage.textContent = '🎉 Excelente! Você tem ótimos conhecimentos sobre sustentabilidade!';
     } else if (percentage >= 60) {
@@ -299,6 +298,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll to Top Button
+function setupScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Add scroll animations
 const observerOptions = {
     threshold: 0.1,
@@ -319,4 +338,16 @@ document.querySelectorAll('.card, .stat-card, .credit-item').forEach(el => {
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
+});
+
+// Particle animation effect
+document.addEventListener('mousemove', function(e) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Subtly update background position on hover (optional)
+    });
 });
