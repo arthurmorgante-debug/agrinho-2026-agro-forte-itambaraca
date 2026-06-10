@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - Itambaracá | Sustentabilidade Agrícola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com Controls -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🌾</div>
+                <div class="logo-text">
+                    <h1>Agro Forte</h1>
+                    <p>Sustentabilidade em Itambaracá</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="themeToggle" class="btn-control" title="Alternar modo escuro">
+                    🌙
+                </button>
+                <button id="fontSizeToggle" class="btn-control" title="Aumentar tamanho da letra">
+                    A+
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#inicio" class="nav-link active">🏠 Início</a>
+        <a href="#sobre" class="nav-link">ℹ️ Sobre</a>
+        <a href="#cards" class="nav-link">🌱 Informações</a>
+        <a href="#quiz" class="nav-link">❓ Quiz</a>
+        <a href="#creditos" class="nav-link">🎓 Créditos</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+        <div class="hero-animation">
+            <div class="leaf leaf1">🍃</div>
+            <div class="leaf leaf2">🍃</div>
+            <div class="leaf leaf3">🍃</div>
+            <div class="leaf leaf4">🍃</div>
+            <div class="leaf leaf5">🌾</div>
+            <div class="leaf leaf6">🌾</div>
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-title">Bem-vindo ao Agro Forte!</h2>
+            <p class="hero-subtitle">Descubra a riqueza agrícola de Itambaracá e a importância da sustentabilidade para o futuro</p>
+            <button class="btn-primary" onclick="document.querySelector('#cards').scrollIntoView({ behavior: 'smooth' })">
+                ✨ Explore Mais
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="about-content">
+            <h2>Sobre Itambaracá</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        <strong>Itambaracá</strong> é um município localizado no norte do <strong>Paraná</strong> que possui uma rica tradição agrícola. 
+                        O município é conhecido por suas plantações de café, milho, soja e outras culturas que são essenciais 
+                        para a economia local e regional.
+                    </p>
+                    <p>
+                        Com clima e solo adequados, Itambaracá se destaca como um importante <strong>polo agrícola</strong>, onde produtores 
+                        rurais utilizam técnicas modernas e sustentáveis para garantir a qualidade e a preservação do meio ambiente.
+                    </p>
+                </div>
+                <div class="about-illustration">
+                    <div class="illustration">🌾🌿🌱</div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">💚</div>
+                    <h3>100%</h3>
+                    <p>Compromisso com Sustentabilidade</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <h3>+50</h3>
+                    <p>Anos de Tradição Agrícola</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <h3>∞</h3>
+                    <p>Inovação e Tecnologia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="cards-section">
+        <h2>🌱 Conhecimentos Agrícolas de Itambaracá</h2>
+        <p class="section-subtitle">Explore os pilares da agricultura sustentável</p>
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🌾</div>
+                    <h3>Plantações Principais</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Itambaracá destaca-se na produção de <strong>café de alta qualidade</strong>, milho, soja e feijão. 
+                        Essas culturas são fundamentais para a alimentação e economia brasileira.
+                    </p>
+                    <ul class="card-list">
+                        <li>☕ Café especializado</li>
+                        <li>🌽 Milho premium</li>
+                        <li>🫘 Soja sustentável</li>
+                        <li>🫘 Feijão carioca</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Agricultura</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🌍</div>
+                    <h3>Sustentabilidade</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Os agricultores de Itambaracá utilizam práticas sustentáveis como <strong>rotação de culturas</strong>, 
+                        conservação do solo e uso consciente de água para garantir a saúde da terra.
+                    </p>
+                    <ul class="card-list">
+                        <li>♻️ Rotação de culturas</li>
+                        <li>🌱 Preservação do solo</li>
+                        <li>💧 Uso eficiente de água</li>
+                        <li>🌳 Reflorestamento</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Meio Ambiente</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💚</div>
+                    <h3>Agricultura Familiar</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        A agricultura familiar é a base da economia local de Itambaracá. <strong>Pequenos produtores</strong> trabalham 
+                        dia a dia para oferecer produtos de qualidade ao mercado.
+                    </p>
+                    <ul class="card-list">
+                        <li>👨‍🌾 Trabalho em família</li>
+                        <li>🏡 Pequenas propriedades</li>
+                        <li>🤝 Cooperativas locais</li>
+                        <li>💼 Empreendedorismo rural</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Comunidade</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🚜</div>
+                    <h3>Tecnologia Agrícola</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Máquinas modernas, irrigação eficiente e <strong>sistemas de monitoramento</strong> permitem aos produtores 
+                        aumentar a produtividade enquanto preservam os recursos naturais.
+                    </p>
+                    <ul class="card-list">
+                        <li>🤖 Precisão agrícola</li>
+                        <li>📡 Sensores IoT</li>
+                        <li>💻 Softwares de gestão</li>
+                        <li>🛰️ Drones agrícolas</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Inovação</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💧</div>
+                    <h3>Conservação de Água</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        A água é um recurso precioso. Em Itambaracá, <strong>sistemas de irrigação eficientes</strong> e coleta de chuva 
+                        ajudam a preservar esse bem essencial.
+                    </p>
+                    <ul class="card-list">
+                        <li>💧 Irrigação por gotejo</li>
+                        <li>🌧️ Coleta de chuva</li>
+                        <li>🔄 Reutilização de água</li>
+                        <li>📊 Monitoramento hídrico</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Recursos Naturais</span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🐝</div>
+                    <h3>Biodiversidade</h3>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Manter a biodiversidade é fundamental. <strong>Polinizadores</strong>, fauna e flora local trabalham juntos 
+                        para manter o equilíbrio do ecossistema agrícola.
+                    </p>
+                    <ul class="card-list">
+                        <li>🐝 Proteção de abelhas</li>
+                        <li>🦋 Borboletas polinizadoras</li>
+                        <li>🌸 Flores silvestres</li>
+                        <li>🦅 Fauna local preservada</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Ecologia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="quiz-container">
+            <h2>🎯 Quiz de Sustentabilidade</h2>
+            <p class="quiz-description">Teste seus conhecimentos sobre sustentabilidade agrícola! (Nível Fácil)</p>
+            
+            <div id="quizContent" class="quiz-content">
+                <!-- Quiz questions will be loaded here by JavaScript -->
+            </div>
+
+            <div id="quizResult" class="quiz-result hidden">
+                <h3>🎉 Sua Pontuação</h3>
+                <div class="score-display">
+                    <span id="scoreNumber">0</span>/<span id="totalQuestions">0</span>
+                </div>
+                <p id="scoreMessage"></p>
+                <button class="btn-primary" onclick="location.reload()">🔄 Fazer Quiz Novamente</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section id="creditos" class="credits-section">
+        <div class="credits-container">
+            <h2>🏆 Créditos do Projeto</h2>
+            <div class="credits-grid">
+                <div class="credit-item">
+                    <div class="credit-icon">👨‍🎓</div>
+                    <h3>Aluno</h3>
+                    <p>Arthur Marques Morgante</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">👨‍🏫</div>
+                    <h3>Professor Orientador</h3>
+                    <p>Guilherme Cordeiro</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">🎖️</div>
+                    <h3>Programa</h3>
+                    <p>Agrinho 2026</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">📍</div>
+                    <h3>Localidade</h3>
+                    <p>Itambaracá - PR</p>
+                </div>
+            </div>
+            <div class="credits-theme">
+                <h3>🌍 Tema do Projeto</h3>
+                <p><strong>Agro Forte: Sustentabilidade Agrícola e Preservação do Meio Ambiente</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+        ⬆️
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Agro Forte</strong> - Todos os direitos reservados</p>
+            <p>Projeto Educativo | Programa Agrinho | Sustentabilidade Agrícola</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
